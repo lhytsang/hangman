@@ -1,12 +1,10 @@
 import random
 
 word_list = ['passion fruit', 'mango', 'raspberry', 'orange', 'banana']
-
-print(word_list)
+#print(fruit for fruit in word_list)
 
 word = random.choice(word_list)
-
-print(word)
+#print(word)
 
 guess = input("Please enter a single letter: ")
 
