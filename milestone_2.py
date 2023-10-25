@@ -1,7 +1,7 @@
 import random
 
 word_list = ['passion fruit', 'mango', 'raspberry', 'orange', 'banana']
-#print(fruit for fruit in word_list)
+[print(fruit) for fruit in word_list]
 
 word = random.choice(word_list)
 #print(word)
