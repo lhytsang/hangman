@@ -1,3 +1,8 @@
+import random
+
+word_list = ['passion fruit', 'mango', 'raspberry', 'orange', 'banana']
+word = random.choice(word_list)
+
 check_letter = True
 
 while check_letter == True:
@@ -7,3 +12,8 @@ while check_letter == True:
         check_letter = False
     else:
         print("Invalid letter. Please, enter a single alphabetical character.")
+
+if guess in word:
+    print(f"Good guess! {guess} is in the word.")
+else:
+    print(f"Sorry, {guess} is not in the word. Try again." )
