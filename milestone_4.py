@@ -8,4 +8,6 @@ class Hangman:
 
     def word(word_list):
         word = random.choice(word_list)
+
+    def word_guessed(word):
         
