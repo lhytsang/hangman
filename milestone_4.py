@@ -1,3 +1,5 @@
+import random
+
 class Hangman:
 
     def __init__(self, word_list, num_lives=5):
