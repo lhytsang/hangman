@@ -5,30 +5,11 @@ class Hangman:
     def __init__(self, word_list, num_lives=5):
         self.word_list = word_list
         self.num_lives = num_lives
+        self.word = random.choice(self.word_list)
+        self.word_guessed = ['-'] * self.word
+        self.num_letters = len(set(self.word))
+        self.list_of_guesses = []
 
-    def word(self):
-       return random.choice(self.word_list)
+    
 
-    def __len__(self):
-        return len(self.word)
-    
-    def word_guessed(self):
-        return ['-'] * self.__len__(self.word)
-    
-    def num_letters(self):
-        unique_letters = 0
-        for letter in self.word:
-            if letter not in self.word:
-                unique_letters +=1
-        return unique_letters
-    
-    def num_lives(self):
-        return self.num_lives
-    
-    def word_list(self):
-        return self.word_list
-    
-    def list_of_guesses(self):
-        return []
-        
             
