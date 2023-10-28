@@ -14,3 +14,9 @@ class Hangman:
     
     def word_guessed(self):
         return ['-'] * self.__len__(self.word)
+    
+    def num_letters(self):
+        unique_letters = 0
+        for letter in self.word:
+            if letter not in self.word:
+                unique_letters +=1
