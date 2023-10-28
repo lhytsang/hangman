@@ -9,4 +9,7 @@ class Hangman:
     def word(word_list):
        return random.choice(word_list)
 
+    def __len__(self, word):
+        return len(self.word)
+    
     def word_guessed(word):
