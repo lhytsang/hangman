@@ -18,3 +18,4 @@ class Hangman:
             self.guess_list.append(guess)
             print(f"Good guess! {guess} is in the word")
 
+    def ask_for_input():
