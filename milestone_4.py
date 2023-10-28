@@ -6,11 +6,11 @@ class Hangman:
         self.word_list = word_list
         self.num_lives = num_lives
 
-    def word(word_list):
-       return random.choice(word_list)
+    def word(self):
+       return random.choice(self.word_list)
 
-    def __len__(word):
-        return len(word)
+    def __len__(self):
+        return len(self.word)
     
-    def word_guessed(word):
-        return ['-'] * len(word)
+    def word_guessed(self):
+        return ['-'] * self.__len__(self.word)
