@@ -10,6 +10,6 @@ class Hangman:
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
 
-    
+    def check_guess(self, guess):
 
             
