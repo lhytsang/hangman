@@ -27,3 +27,21 @@ class Hangman:
     
     def word_list(self):
         return self.word_list
+    
+    def list_of_guesses(self, guess):
+        guess_list = []
+        
+        if guess in self.word:
+            if guess not in self.word_guessed:
+                self.word_guessed.append(guess)
+                print(f"Great choice - your letter is in the word! \n {self.word_guessed}")
+                guess_list.append(guess)
+            else:
+                print('You have already guessed this letter! \n ',
+                      'Here are the letters you have already guessed: \n',
+                       '{}'.format(self.list_of_guesses))
+        else:
+            self.num_lives -= 1
+            print(f"Sorry - wrong choice! You have {self.num_lives} left.")
+            guess_list.append(guess)
+            
