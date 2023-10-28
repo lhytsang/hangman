@@ -20,3 +20,4 @@ class Hangman:
         for letter in self.word:
             if letter not in self.word:
                 unique_letters +=1
+        return unique_letters
