@@ -11,5 +11,6 @@ class Hangman:
         self.list_of_guesses = []
 
     def check_guess(self, guess):
+        guess = guess.lower()
 
             
