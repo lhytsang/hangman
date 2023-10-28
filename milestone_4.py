@@ -24,3 +24,6 @@ class Hangman:
     
     def num_lives(self):
         return self.num_lives
+    
+    def word_list(self):
+        return self.word_list
