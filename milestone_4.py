@@ -21,3 +21,6 @@ class Hangman:
             if letter not in self.word:
                 unique_letters +=1
         return unique_letters
+    
+    def num_lives(self):
+        return self.num_lives
