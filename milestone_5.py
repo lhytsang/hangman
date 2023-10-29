@@ -55,3 +55,5 @@ def play_game(word_list):
             game.ask_for_input()
         if num_lives != 0 and game.num_letters <= 0:
             print("Congratulations. You won the game!") 
+
+play_game(word_list)
