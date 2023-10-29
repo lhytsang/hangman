@@ -20,6 +20,8 @@ class Hangman:
             for letter in self.word:
                 indices = [self.word.index(letter, position, len(self.word)) for position in range(len(self.word)) if letter == guess]
                 self.word_guessed = [self.word_guessed[num] == guess for num in indices]
+            
+            self.num_letters -= 1
    
     def ask_for_input(self):
         check_letter = True
