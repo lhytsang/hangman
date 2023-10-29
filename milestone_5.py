@@ -18,7 +18,11 @@ class Hangman:
             print(f"Good guess! {guess} is in the word")
 
             for letter in self.word:
-                indices = [self.word.index(letter, position, len(self.word)) for position in range(len(self.word)) if letter == guess]
+                indices = []
+
+                for position in range(len(self.word)):
+                    if letter == guess:
+                        indices.append(self.word.index(letter, position, len(self.word)))
 
             for index in indices:
                 self.word_guessed[index] = guess
@@ -35,7 +39,7 @@ class Hangman:
         while check_letter == True:
             guess = input("Please enter a single letter: ")
             
-            if guess.isnumeric() and len(guess) != 1:
+            if not(guess.isalpha() and len(guess) == 1):
                 print("Invalid letter. Please, enter a single alphabetical character.")
             elif guess in self.list_of_guesses:
                 print("You already tried that letter!")
