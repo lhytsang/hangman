@@ -22,6 +22,10 @@ class Hangman:
                 self.word_guessed = [self.word_guessed[num] == guess for num in indices]
             
             self.num_letters -= 1
+
+        else:
+            self.num_lives -= 1
+            print(f"Sorry, {guess} is not in the word. \n You have {self.num_lives} lives left.")
    
     def ask_for_input(self):
         check_letter = True
