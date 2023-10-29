@@ -40,3 +40,14 @@ class Hangman:
             else:
                 Hangman.check_guess(guess)
                 self.list_of_guesses.append(guess)
+
+word_list = ["passion fruit", "mango", "raspberry", "orang", "banana"]
+
+def play_game(word_list):
+    num_lives = 5
+    condition = True
+    game = Hangman(word_list, num_lives)
+
+    while condition == True:
+        if num_lives == 0:
+            print("You lost!")
