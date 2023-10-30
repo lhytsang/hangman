@@ -49,15 +49,16 @@ word_list = ["passion fruit", "mango", "raspberry", "orange", "banana"]
 
 def play_game(word_list):
     num_lives = 5
+    game = Hangman(word_list, num_lives)
     
-    while num_lives >= 0:
-        game = Hangman(word_list, num_lives)
-        if num_lives == 0:
+    while game.num_lives >= 0:
+        
+        if game.num_lives == 0:
             print("You lost!")
             sys.exit(0)
         if game.num_letters > 0:
             game.ask_for_input()
-        if num_lives != 0 and game.num_letters <= 0:
+        if game.num_lives != 0 and game.num_letters <= 0:
             print("Congratulations. You won the game!") 
             sys.exit(0)
 
