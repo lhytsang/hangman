@@ -15,7 +15,7 @@ class Hangman:
 
         if guess in self.word:
             self.list_of_guesses.append(guess)
-            print(f"Good guess! {guess} is in the word")
+            print(f"Good guess! {guess} is in the word.\n {self.word_guessed}")
 
             indices = []
             for position in range(len(self.word)):
@@ -40,7 +40,8 @@ class Hangman:
             if not(guess.isalpha() and len(guess) == 1):
                 print("Invalid letter. Please, enter a single alphabetical character.")
             elif guess in self.list_of_guesses:
-                print("You already tried that letter!")
+                print("You already tried that letter!\n",
+                      "Here are the letters you have already guessed:\n {}".format(self.list_of_guesses))
             else:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
