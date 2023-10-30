@@ -57,7 +57,7 @@ def play_game(word_list):
     game = Hangman(word_list, num_lives)
 
     while condition == True:
-        if num_lives == 0:
+        if game.num_lives == 0:
             print("You lost!")
         if game.num_letters > 0:
             game.ask_for_input()
