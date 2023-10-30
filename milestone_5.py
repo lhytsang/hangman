@@ -33,17 +33,16 @@ class Hangman:
             print(f"Sorry, {guess} is not in the word. \n You have {self.num_lives} lives left.")
    
     def ask_for_input(self):
-        while '-' in self.word_guessed:
-            guess = input("Please enter a single letter: ")
+        guess = input("Please enter a single letter: ")
                 
-            if not(guess.isalpha() and len(guess) == 1):
-                print("Invalid letter. Please, enter a single alphabetical character.")
-            elif guess in self.list_of_guesses:
-                print("You already tried that letter!\n",
+        if not(guess.isalpha() and len(guess) == 1):
+            print("Invalid letter. Please, enter a single alphabetical character.")
+        elif guess in self.list_of_guesses:
+            print("You already tried that letter!\n",
                       "Here are the letters you have already guessed:\n {}".format(self.list_of_guesses))
-            else:
-                self.check_guess(guess)
-                self.list_of_guesses.append(guess)
+        else:
+            self.check_guess(guess)
+            self.list_of_guesses.append(guess)
 
 word_list = ["passion fruit", "mango", "raspberry", "orange", "banana"]
 
