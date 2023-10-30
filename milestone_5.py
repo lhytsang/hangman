@@ -22,7 +22,7 @@ class Hangman:
                     indices.append(position)
 
             for index in indices:
-                self.word_guessed.insert(index, guess)
+                self.word_guessed[index] = guess
             
             print(f"Good guess! {guess} is in the word.\n {self.word_guessed}")
 
