@@ -15,8 +15,7 @@ class Hangman:
 
         if guess in self.word:
             self.list_of_guesses.append(guess)
-            print(f"Good guess! {guess} is in the word.\n {self.word_guessed}")
-
+            
             indices = []
             for position in range(len(self.word)):
                 if self.word[position] == guess:
@@ -25,6 +24,8 @@ class Hangman:
             for index in indices:
                 self.word_guessed.insert(index, guess)
             
+            print(f"Good guess! {guess} is in the word.\n {self.word_guessed}")
+
             self.num_letters -= 1
 
         else:
