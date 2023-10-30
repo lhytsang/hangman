@@ -22,7 +22,7 @@ class Hangman:
                 if self.word[position] == guess:
                     indices.append(self.word.index(guess, position, len(self.word)))
                 else:
-                    continue
+                    pass
 
             for index in indices:
                 self.word_guessed[index] = guess
